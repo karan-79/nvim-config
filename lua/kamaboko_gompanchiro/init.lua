@@ -1,5 +1,6 @@
 require("kamaboko_gompanchiro.remap")
 require("kamaboko_gompanchiro.ascii")
+require("kamaboko_gompanchiro.set")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -19,7 +20,11 @@ require("lazy").setup({
 	 { "rose-pine/neovim", name = "rose-pine" },
 	 { 'nvim-treesitter/nvim-treesitter',  build = ":TSUpdate"  },
 	'nvim-treesitter/playground',
-	'ThePrimeagen/harpoon',
+	{
+		"ThePrimeagen/harpoon",
+		branch = "harpoon2",
+		dependencies = { "nvim-lua/plenary.nvim" }
+	},
 	'mbbill/undotree',
 	"tpope/vim-fugitive",
 	
@@ -34,5 +39,3 @@ require("lazy").setup({
 
 vim.cmd("colorscheme rose-pine")
 
--- there was this
--- common
