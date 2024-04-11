@@ -1,3 +1,3 @@
 require("kamaboko_gompanchiro")
-print("hello")
+require("kamaboko_gompanchiro.ascii")
 ColorDeez()
