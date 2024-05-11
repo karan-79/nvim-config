@@ -21,9 +21,10 @@ local cmp = require('cmp')
 
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
   }),
 })
+
 vim.keymap.set("n", "<C-k>", vim.lsp.buf.hover)
 
 vim.keymap.set("n", "<leader><leader>", vim.cmd.Ex)

@@ -28,6 +28,7 @@ require("lazy").setup({
 	'mbbill/undotree',
 	"tpope/vim-fugitive",
     "tpope/vim-surround",
+    "tpope/vim-commentary",
 	
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 	{'williamboman/mason.nvim'},
@@ -36,6 +37,7 @@ require("lazy").setup({
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/nvim-cmp'},
 	{'L3MON4D3/LuaSnip'},
+    {'prettier/vim-prettier', build = "yarn install --frozen-lockfile --production" }
     })
 
 vim.cmd("colorscheme rose-pine")

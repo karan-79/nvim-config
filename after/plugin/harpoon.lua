@@ -12,4 +12,6 @@ vim.keymap.set("n", "<C-s>", function() ui.nav_file(4) end)
 
 vim.keymap.set("n", "<C-A-Left>", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<C-A-Right>", function() harpoon:list():next() end)
-
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, 
+{ pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.java", "*.json"},
+callback = function() harpoon:list():add() end })
