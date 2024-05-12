@@ -28,7 +28,7 @@ require("lazy").setup({
 	'mbbill/undotree',
 	"tpope/vim-fugitive",
     "tpope/vim-surround",
-    "tpope/vim-commentary",
+    "tpope/vim-surround",
 	
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 	{'williamboman/mason.nvim'},
